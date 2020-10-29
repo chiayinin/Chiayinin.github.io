@@ -20,17 +20,26 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://chiayinin.com/archives/2020/09/index.html">
+    <meta name="description" content="數字：整數 Integer、浮點數 Float＊英文發音首先來聽聽英文發音～。 整數 Integer 浮點數 Float 名詞解釋數字型別包含：  整數 Integer：可數的，EX:1,2,3,4,5……。 浮點數 Float：小數點，EX:3.33。  Ruby世界的數字？因為Ruby是物件導向的程式語言，大多數看到的皆是「物件」，肉眼看起來像數字外觀的數字也是物件的一種唷。 △肉眼觀世間，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 5 : Ruby中的「數字、符號」">
+<meta property="og:url" content="https://chiayinin.com/2020/09/12/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-5-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E6%95%B8%E5%AD%97%E3%80%81%E7%AC%A6%E8%99%9F%E3%80%8D/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="數字：整數 Integer、浮點數 Float＊英文發音首先來聽聽英文發音～。 整數 Integer 浮點數 Float 名詞解釋數字型別包含：  整數 Integer：可數的，EX:1,2,3,4,5……。 浮點數 Float：小數點，EX:3.33。  Ruby世界的數字？因為Ruby是物件導向的程式語言，大多數看到的皆是「物件」，肉眼看起來像數字外觀的數字也是物件的一種唷。 △肉眼觀世間，">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://ithelp.ithome.com.tw/upload/images/20200912/20129424kGV2BMklLi.jpg">
+<meta property="og:image" content="https://img.youtube.com/vi/DDC8rC9uQcg/0.jpg">
+<meta property="og:image" content="https://img.youtube.com/vi/eNaXx7HUPcA/0.jpg">
+<meta property="article:published_time" content="2020-09-12T07:32:11.000Z">
+<meta property="article:modified_time" content="2020-10-29T08:28:47.133Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="12th鐵人賽, Ruby">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ithelp.ithome.com.tw/upload/images/20200912/20129424kGV2BMklLi.jpg">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>Chiayin&#39;s blog</title>
+    <title>[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 5 : Ruby中的「數字、符號」 · Chiayin&#39;s blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -211,12 +220,23 @@
 <meta name="generator" content="Hexo 5.1.1"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Chiayin&#39;s blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 5 : Ruby中的「數字、符號」</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Chiayin's blog</a>
 </header>
@@ -228,24 +248,69 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            [2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 5 : Ruby中的「數字、符號」
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "12th鐵人賽, Ruby">12th鐵人賽, Ruby</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">1.1k</span>Reading time: <span class="post-count reading-time">4 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/09/12</span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,389 +411,128 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/21/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-14-Rails-%E4%B8%AD%E7%9A%84%E3%80%8CMVC%E3%80%8D%EF%BC%81/" >
-            
-                <span>[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 14 : Rails 中的「MVC」！</span>
-        </a>
-        <div class="abstract-content">
-            
-MVC架構＊英文發音首先來聽聽英文發音～。
-Route
-Model
-View
-Controller
-什麼是MVC是這樣子的，Rails這個網站開發架構，引入一種軟體架構模式-MVC模式（Model–view–controller）。
-其便是將軟體分為三個部分：
+            <main class="main post-page">
+    <article class="article-entry">
+        <p><img src="https://ithelp.ithome.com.tw/upload/images/20200912/20129424kGV2BMklLi.jpg" alt="https://ithelp.ithome.com.tw/upload/images/20200912/20129424kGV2BMklLi.jpg"></p>
+<h2 id="數字：整數-Integer、浮點數-Float"><a href="#數字：整數-Integer、浮點數-Float" class="headerlink" title="數字：整數 Integer、浮點數 Float"></a>數字：整數 Integer、浮點數 Float</h2><p><strong>＊英文發音</strong><br>首先來聽聽英文發音～。</p>
+<p>整數 Integer<br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=DDC8rC9uQcg"><img src="https://img.youtube.com/vi/DDC8rC9uQcg/0.jpg" alt="Yes"></a></p>
+<p>浮點數 Float<br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=eNaXx7HUPcA"><img src="https://img.youtube.com/vi/eNaXx7HUPcA/0.jpg" alt="Yes"></a></p>
+<h3 id="名詞解釋"><a href="#名詞解釋" class="headerlink" title="名詞解釋"></a>名詞解釋</h3><p>數字型別包含：</p>
+<ul>
+<li>整數 Integer：可數的，EX:1,2,3,4,5……。</li>
+<li>浮點數 Float：小數點，EX:3.33。</li>
+</ul>
+<h4 id="Ruby世界的數字？"><a href="#Ruby世界的數字？" class="headerlink" title="Ruby世界的數字？"></a>Ruby世界的數字？</h4><p>因為Ruby是物件導向的程式語言，大多數看到的皆是「物件」，肉眼看起來像數字外觀的數字也是物件的一種唷。</p>
+<p><strong>△肉眼觀世間，曖昧難辨</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">puts 1 + 2</span><br><span class="line">印出來 -&gt; 3</span><br></pre></td></tr></table></figure>
+<p>以上看起來簡簡單單的加法運算，但其實加號在Ruby中只是一般的方法（method），省略了小括號。</p>
+<p>原來的樣子應該是如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">puts 1.+(2)</span><br><span class="line">印出來 -&gt; 3</span><br></pre></td></tr></table></figure>
+<p>這個加號，事實上是「數字物件 1」呼叫了「+」這個方法，並且把「數字物件 2」當做參數傳進去。也因為他是一個方法，所以也可以重新改寫它原來的功能，讓 1 + 1 不等於 2 都是有可能的。</p>
+<h4 id="浮點數轉整數"><a href="#浮點數轉整數" class="headerlink" title="浮點數轉整數"></a>浮點數轉整數</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">puts 3.33.round #轉成整數，四捨五入</span><br><span class="line">puts 3.33.floor #轉成整數，無條件捨去</span><br><span class="line">puts 3.33.ceil  #轉成整數，無條件進位</span><br><span class="line">puts 3.33.to_i  #小數轉整數，無條件捨去</span><br></pre></td></tr></table></figure>
 
-模型(Model)
-畫面(View)
-控制器(Controller)
+<h4 id="型別轉換-Conversions"><a href="#型別轉換-Conversions" class="headerlink" title="型別轉換 Conversions"></a>型別轉換 Conversions</h4><p>字串可以使用以下轉型方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">to_i: 轉整數</span><br><span class="line">to_f: 轉浮點數</span><br><span class="line">to_sym: 轉符號</span><br><span class="line">to_s: 轉字串</span><br></pre></td></tr></table></figure>
 
-為什麼要使用這套模式呢？他的優點在於：
+<p>如下範例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p &quot;169.99cm&quot;.to_f   # 169.99</span><br><span class="line">p &quot;169.99cm&quot;.to_i   # 169</span><br><span class="line">p &quot;169.99cm&quot;.to_sym # :&quot;169.99cm&quot;</span><br><span class="line">p :169cm.to_s       # &quot;169cm&quot;</span><br></pre></td></tr></table></figure>
 
-分工容易：每個部分各司其職，能讓程式的架構更加直覺，也因此更容易進行分工。
-開發慣例：另一個好處是，Rails的專案皆是遵循MVC的慣例結構，因此不同程度的設計者來開發，差異不會太大。Controller通常會放在...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "12th鐵人賽, Ruby">12th鐵人賽, Ruby</a>
-    
-</div>
-            
-        </div>
+<h4 id="整數除法"><a href="#整數除法" class="headerlink" title="整數除法"></a>整數除法</h4><p>因為Ruby是物件導向程式語言，看過去的東西大多為物件，因此在Ruby世界裡面，整數除以整數會得到整數<code>10/3 == 3</code>。</p>
+<p><strong>＊那要如何得到小數點？</strong></p>
+<blockquote>
+<p>除數或被除數其中一個改小數點即可!</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">10.0&#x2F;3 &#x3D;&#x3D; 3.333333</span><br><span class="line">10&#x2F;3.0 &#x3D;&#x3D; 3.333333</span><br><span class="line">10.0&#x2F;3.0 &#x3D;&#x3D; 3.333333</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h2 id="符號-Symbol"><a href="#符號-Symbol" class="headerlink" title="符號 Symbol"></a>符號 Symbol</h2><p><strong>＊英文發音</strong><br>首先來聽聽英文發音～。<br><a target="_blank" rel="noopener" href="https://youtu.be/EJg47hnavNM">https://youtu.be/EJg47hnavNM</a></p>
+<h3 id="名詞解釋-1"><a href="#名詞解釋-1" class="headerlink" title="名詞解釋"></a>名詞解釋</h3><p>在了解符號之前，先來加深「物件」的概念。在Ruby的世界裡，看到的大多是物件，如以下：</p>
+<ul>
+<li><code>1000</code>：數字物件</li>
+<li><code>&quot;World peace&quot;</code>：字串物件</li>
+<li><code>：vegan</code>：符號物件</li>
+</ul>
+<p>由以上可以得知，「符號 Symbol」使用冒號<code>:</code>開頭，他類似一種無法修改的字串，我們會說他是「有名字的物件 an object with a name」。</p>
+<p>要注意的是，「符號」不是「變數」，是值，本身不會只向任何東西。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 「變數」可以指向</span><br><span class="line">say &#x3D; &quot;hello world!&quot;</span><br><span class="line"></span><br><span class="line"># 「符號」不可以指向</span><br><span class="line">:say &#x3D; &quot;hello world!&quot; -&gt; 會出錯！</span><br></pre></td></tr></table></figure>
+
+<p><strong>＊那字串跟符號哪裡不一樣？</strong><br>字串的效能會比符號差了一點點，兩者最主要的差異在於「記憶體的管理方式」，由於 Ruby中的每個字串都是新的物件，所以即使是相同的字串也會佔用不同的記憶體，而符號則是重復利用：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">puts <span class="string">&quot;string&quot;</span>.object_id <span class="comment"># 2157007700 &lt;- 不同記憶體位置</span></span><br><span class="line">puts <span class="string">&quot;string&quot;</span>.object_id <span class="comment"># 2157007540</span></span><br><span class="line">puts <span class="symbol">:symbol</span>.object_id  <span class="comment"># 391528 &lt;- 相同的記憶體位置</span></span><br><span class="line">puts <span class="symbol">:symbol</span>.object_id  <span class="comment"># 391528</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>＊不可變(immutable)的特性？</strong><br>符號具有不可變的特性，字串可以改變值，符號不行。<br>可由以下例子得知：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;abcde&quot;</span></span><br><span class="line">name[<span class="number">3</span>] = <span class="number">4</span></span><br><span class="line">p name -&gt; <span class="string">&quot;abc4e&quot;</span></span><br><span class="line"></span><br><span class="line">name = <span class="symbol">:abcde</span></span><br><span class="line">name[<span class="number">3</span>] = <span class="number">4</span></span><br><span class="line">p name -&gt; undefined method <span class="string">`[]=&#x27; for :abcde:Symbol (NoMethodError)</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>＊符號的功用是什麼呢？</strong><br>因為以上的特性，讓符號在Ruby中主要用作hash的鍵(key)或者是用來指稱方法的名稱。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hash = &#123;<span class="symbol">:key</span> =&gt; <span class="string">&quot;12345&quot;</span>, <span class="symbol">:symbol</span> =&gt; <span class="string">&quot;string&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="總整理"><a href="#總整理" class="headerlink" title="總整理"></a>總整理</h3><blockquote>
+<ol>
+<li>immutable：被建立後就不能改變。</li>
+<li>任何「符號」都指稱到同一個記憶體位置，因此較省記憶體。</li>
+<li>以「符號」當作鍵(key)的效能會比「字串」當作鍵的效能來得好。</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="回家作業"><a href="#回家作業" class="headerlink" title="回家作業"></a>回家作業</h2><p>請回答以下問題：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.請問符號是什麼？跟變數一樣嗎？</span><br><span class="line">2.字串嵌入 String interpolation是什麼？如何實作？</span><br><span class="line">3.請寫出以下p後會印出什麼？</span><br><span class="line">  p 3.30393.floor</span><br><span class="line">  p 1.33.to_i</span><br><span class="line">  p :hello.to_s</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
+<li>更多的衍伸用法，可以參考龍哥的書《為你自己學 Ruby on Rails》：<a target="_blank" rel="noopener" href="https://railsbook.tw/chapters/06-ruby-basic-2.html#string_class">數字、字串、陣列、範圍、雜湊、符號</a></li>
+<li>小殘的程式光廊：<a target="_blank" rel="noopener" href="https://emn178.pixnet.net/blog/post/110896195">Ruby教學 - 符號(Symbol)</a></li>
+<li>PJCHENder 未整理筆記<a target="_blank" rel="noopener" href="https://pjchender.github.io/2017/09/26/ruby-symbol%EF%BC%88%E7%AC%A6%E8%99%9F%EF%BC%89/">Symbol（符號）</a></li>
+</ul>
+
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/20/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-13-%E5%AD%B8%E7%BF%92%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BC%EF%BC%8CRuby-on-Rails%E4%BE%86%E4%BA%86%EF%BC%81/" >
-            
-                <span>[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 13 : 學習網站開發，Ruby on Rails來了！</span>
-        </a>
-        <div class="abstract-content">
-            ＊英文發音首先來聽聽英文發音～。
-Ruby
-Rails
-framework
-什麼是Ruby on Rails?常常聽到Ruby on Rails，這和Ruby的關聯性是什麼呢？
-Ruby是一種程式語言，而Ruby on Rails是由Ruby這個語言寫出來的「網站開發框架」唷！
-
-發明人：David Heinemeier Hansson設計的，通常縮寫成DHH，丹麥的程式設計師。
-2004年開發，2005年展示在15分鐘內使用Rails開發完一個部落格，就此名聲大噪！
-其實是做某個產品中的副產品，不是特意發明的。也有人稱之為RoR，但業界都稱為Rails。
-
-什麼是網頁框架 Web fr...
+        <div class="license-wrapper">
+            <!-- <p>Author：<a href="https://chiayinin.com">John Doe</a> -->
+            <p>原文連結：<a href="https://chiayinin.com/2020/09/12/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-5-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E6%95%B8%E5%AD%97%E3%80%81%E7%AC%A6%E8%99%9F%E3%80%8D/">https://chiayinin.com/2020/09/12/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-5-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E6%95%B8%E5%AD%97%E3%80%81%E7%AC%A6%E8%99%9F%E3%80%8D/</a>
+            <p>發表日期：<a href="https://chiayinin.com/2020/09/12/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-5-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E6%95%B8%E5%AD%97%E3%80%81%E7%AC%A6%E8%99%9F%E3%80%8D/">September 12th 2020</a>
+            <p>更新日期：<a href="https://chiayinin.com/2020/09/12/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-5-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E6%95%B8%E5%AD%97%E3%80%81%E7%AC%A6%E8%99%9F%E3%80%8D/">October 29th 2020</a>
+            <!-- <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "12th鐵人賽, Ruby">12th鐵人賽, Ruby</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/19/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-12-Ruby%E7%9A%84%E3%80%8C%E8%A8%BB%E8%A7%A3%E3%80%81%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E3%80%8D/" >
-            
-                <span>[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 12 : Ruby的「註解、流程控制」</span>
-        </a>
-        <div class="abstract-content">
-            
-註解 Comment＊英文發音首先來聽聽英文發音～。
-註解的用意？為什麼在程式碼裡面還要寫註解呢？其實啊，程式碼裡的註解是給設計者看的，它的特性為「在程式跑動時會被忽略，不被執行」。也因此，註解在程式語言中佔據相當重要的部分，其主要用途為：
-
-解釋原始碼的功能：增加程式的閱讀性與維護性。
-除錯功能：讓該行程式碼不執行，尋找代碼bug的位置。
-
-使用註解的方式在前面的章節其實使用過許多次了，註解分為：
-
-單行註解：井字號#。
-塊註解：多行註解=begin…=end。
-
-範例：
-123456789# 這是# 單行# 註解&#x3D;begin這是多行註解&#x3D;end
-
-各種程式語言，...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "12th鐵人賽, Ruby">12th鐵人賽, Ruby</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/18/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-11-Ruby%E7%9A%84%E3%80%8C%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88-%E6%96%B9%E6%B3%95%E3%80%8D/" >
-            
-                <span>[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 11 : Ruby的「物件導向程式設計-方法」 </span>
-        </a>
-        <div class="abstract-content">
-            圖片來源點這邊
-方法 Method＊英文發音首先來聽聽英文發音～。
-什麼是方法呢？在物件導向程式語言中，我們將程式法擬人化，讓設計者更方便使用程式碼，而「物件」本身含有「狀態」與「行為」，因此物件應有自己的運作方式。
-當我們將訊息傳給物件，物件便會回應我們的需求，不一定需要了解物件內實際的運作方式。而這個允許我們要求物件執行的工作，就稱之為方法(method)。
-如何使用方法？＊首先：定義方法
-在Ruby世界，使用def…end來定義方法。後面加上括號()可以傳入參數，若想要傳多個參數可以使用逗號,。
-123def eat(food)  puts &quot;So delicious #...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "12th鐵人賽, Ruby">12th鐵人賽, Ruby</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/17/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-10-Ruby%E7%9A%84%E3%80%8C%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88-%E9%A1%9E%E5%88%A5%E3%80%8D/" >
-            
-                <span>[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 10 : Ruby的「物件導向程式設計-類別」 </span>
-        </a>
-        <div class="abstract-content">
-            
-類別與實體 class and instance＊英文發音首先來聽聽英文發音～。class
-instance
-什麼是類別呢？這裡例舉個實際的例子讓大家明白。
-首先請問大家，有沒有吃過紅龜粿呢&gt;ˇ&lt;/！我最喜歡吃這種古早味的點心了，雖然吃下去會很胖也很常噎到，但是包蘿蔔絲的素食紅龜粿或草仔粿好好吃唷～，都會很珍惜、小心翼翼地、滿懷感激吃下去。
-那麼，紅龜粿和類別有什麼關聯呢？咳咳，是這樣子的，製作紅龜粿會有個模具，稱之為「粿模」(或叫做「粿印」、「粿模」、「餅印」)，在傳統的農業社會時代，每逢年過節，家家戶戶都會使用各式各樣的「粿模」印製代表吉祥、長壽、豐收……等各種不同樣貌...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "12th鐵人賽, Ruby">12th鐵人賽, Ruby</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/16/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-9-Ruby%E7%9A%84%E3%80%8C%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88-%E7%89%A9%E4%BB%B6%E3%80%8D/" >
-            
-                <span>[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 9 : Ruby的「物件導向程式設計-物件」 </span>
-        </a>
-        <div class="abstract-content">
-            
-物件 Object＊英文發音首先來聽聽英文發音～。
-什麼是物件呢？先來了解公式：
-
-物件 Object = 狀態 State（名詞）+ 行為 Behavior（動詞）
-
-「物件」存在我們生活四周，如有形的：小木屋、千年巨木、黑色的碗盤，或無形的：銷售數據、工作考績……等。
-無論哪種物件都可以用：「狀態」+「行為」，兩種事物來描述，例如：千年巨木的枝幹、樹葉是狀態的描述，生長、凋落是行為的描述。
-物件導向程式設計使程式碼擬人化，讓設計者更加容易使用。
-Ruby世界為了讓大家更容易學習程式設計，許多程式語言都有引進物件導向的概念，讓程式架構更容易組織、整理。而 Ruby 又是一款物件化相當...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/16</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "12th鐵人賽, Ruby">12th鐵人賽, Ruby</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/15/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-8-Ruby%E7%9A%84%E3%80%8C%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88%E3%80%8D/" >
-            
-                <span>[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 8 : Ruby的「物件導向程式設計」</span>
-        </a>
-        <div class="abstract-content">
-            Ruby是物件導向程式語言，這是比較難懂的觀念，對新手而言更是。這篇會盡量將自己理解的內容寫出來。
-＊英文發音首先來聽聽英文發音～。
-什麼是物件導向程式設計物件導向程式設計 Object-Oriented Programming (縮寫：OOP）
-＊先來看看維基百科怎麼說～
-
-是種具有物件概念的程式程式設計典範，同時也是一種程式開發的抽象方針。它可能包含資料、屬性、程式碼與方法。物件則指的是類別的實例。它將物件作為程式的基本單元，將程式和資料封裝其中，以提高軟體的重用性、靈活性和擴充性，物件裡的程式可以存取及經常修改物件相關連的資料。
-
-好的，其實看完維基百科的解釋還是不太懂（笑）。
-物...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "12th鐵人賽, Ruby">12th鐵人賽, Ruby</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/14/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-7-Ruby%E4%B8%AD%E7%9A%84%E3%80%8CHash%E3%80%8D/" >
-            
-                <span>[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 7 : Ruby中的「Hash」</span>
-        </a>
-        <div class="abstract-content">
-            
-雜湊 Hash＊英文發音首先來聽聽英文發音～。
-名詞解釋Hash是由Key、Value所組成的資料，設計者只要根據Key值就可以取得相對應的資料唷！雖然中文翻譯很奇怪，不過大家都是這麼稱呼的，實務上使用都是講hash。
-如何建立hash？
-使用hash類別，new一個給他。1vegan = Hash.new
-使用大括號12345vegan = &#123;&#125;# EX:vegan = &#123; name: &#x27;Lisa&#x27;, age:8 &#125;p vegan -&gt; &#123; :name =&gt; &quot;Lisa&quot;, :age...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/14</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "12th鐵人賽, Ruby">12th鐵人賽, Ruby</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/13/hello-world/" >
-            
-                <span>Hello World</span>
-        </a>
-        <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
-
-More info: Writing
-Run server1$ hexo ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/13</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/13/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-6-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E9%99%A3%E5%88%97%E3%80%81%E7%AF%84%E5%9C%8D%E3%80%8D/" >
-            
-                <span>[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 6 : Ruby中的「陣列、範圍」</span>
-        </a>
-        <div class="abstract-content">
-            
-陣列 Array＊英文發音首先來聽聽英文發音～。
-何謂陣列？陣列[]：是一組相同型態的連續變數，它們使用同一個變數名稱，而另外用一個索引值來指定使用第幾個變數。在方括號[]裡放進同類型的元素，而在Ruby世界的陣列能夠容納各種型別的物件。
-如何建立陣列？
-new 一個陣列的類別
-1x = Array.new
-
-直接指向方括號，為常用的寫法，並使用逗號區別元素。
-123y = []Array = [1,2,3,4,5,&quot;aa&quot;]
-
-使用%w，會建立字串的陣列
-1234Array = %w(aa bb nn)p Array-&gt; # 印出 [&quot;aa&quo...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/13</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "12th鐵人賽, Ruby">12th鐵人賽, Ruby</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2020/09/13/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-6-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E9%99%A3%E5%88%97%E3%80%81%E7%AF%84%E5%9C%8D%E3%80%8D/" title= "[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 6 : Ruby中的「陣列、範圍」">
+                    <div class="nextTitle">[2020 12th鐵人賽] Ruby名詞解釋總匯 - Day 6 : Ruby中的「陣列、範圍」</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/09/11/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-4-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5%E3%80%81%E5%AD%97%E4%B8%B2%E3%80%8D/" title= "[2020 12th鐵人賽] Ruby名詞解釋總匯 -  Day 4 : Ruby中的「資料型別、字串」">
+                    <div class="prevTitle">[2020 12th鐵人賽] Ruby名詞解釋總匯 -  Day 4 : Ruby中的「資料型別、字串」</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/archives/2020/09/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/09/page/2/">NEXT &gt;</a>
-    </nav>
     
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
+
             <!-- profile -->
             
         </div>
@@ -801,6 +605,24 @@ new 一個陣列的類別
 
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B8%E5%AD%97%EF%BC%9A%E6%95%B4%E6%95%B8-Integer%E3%80%81%E6%B5%AE%E9%BB%9E%E6%95%B8-Float"><span class="toc-number">1.</span> <span class="toc-text">數字：整數 Integer、浮點數 Float</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B"><span class="toc-number">1.1.</span> <span class="toc-text">名詞解釋</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Ruby%E4%B8%96%E7%95%8C%E7%9A%84%E6%95%B8%E5%AD%97%EF%BC%9F"><span class="toc-number">1.1.1.</span> <span class="toc-text">Ruby世界的數字？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%AE%E9%BB%9E%E6%95%B8%E8%BD%89%E6%95%B4%E6%95%B8"><span class="toc-number">1.1.2.</span> <span class="toc-text">浮點數轉整數</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9E%8B%E5%88%A5%E8%BD%89%E6%8F%9B-Conversions"><span class="toc-number">1.1.3.</span> <span class="toc-text">型別轉換 Conversions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B4%E6%95%B8%E9%99%A4%E6%B3%95"><span class="toc-number">1.1.4.</span> <span class="toc-text">整數除法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E8%99%9F-Symbol"><span class="toc-number">2.</span> <span class="toc-text">符號 Symbol</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B-1"><span class="toc-number">2.1.</span> <span class="toc-text">名詞解釋</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B8%BD%E6%95%B4%E7%90%86"><span class="toc-number">2.2.</span> <span class="toc-text">總整理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E5%AE%B6%E4%BD%9C%E6%A5%AD"><span class="toc-number">3.</span> <span class="toc-text">回家作業</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-number">4.</span> <span class="toc-text">參考資料</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1189,6 +1011,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
