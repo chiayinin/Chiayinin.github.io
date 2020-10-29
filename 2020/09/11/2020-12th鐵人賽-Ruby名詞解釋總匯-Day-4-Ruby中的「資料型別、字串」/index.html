@@ -23,7 +23,7 @@
     <meta name="description" content="資料型別 Data Type在了解接下來的單元前，先簡單知道Ruby世界的資料型別。 ＊普羅大眾的「資料型別」？電腦的功能就是處理無數的資料，資料是儲存在記憶體的儲存區，由於資料的型態各不相同，在儲存時所需要的容量不一，不同的資料必須要配給不同的空間大小來儲存，因而有了資料型態（Data type）的規範。  只要是資料都有型別。  ＊Ruby世界的資料型別由於Ruby是個完全物件導向的語言，從">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[2020 12th鐵人賽] Ruby名詞解釋總匯 -  Day 4 : Ruby中的「資料型別、字串」">
-<meta property="og:url" content="https://chiayinin.com/2020/09/11/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-4-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5%E3%80%81%E5%AD%97%E4%B8%B2%E3%80%8D/index.html">
+<meta property="og:url" content="https://chiayinin.github.io/2020/09/11/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-4-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5%E3%80%81%E5%AD%97%E4%B8%B2%E3%80%8D/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="資料型別 Data Type在了解接下來的單元前，先簡單知道Ruby世界的資料型別。 ＊普羅大眾的「資料型別」？電腦的功能就是處理無數的資料，資料是儲存在記憶體的儲存區，由於資料的型態各不相同，在儲存時所需要的容量不一，不同的資料必須要配給不同的空間大小來儲存，因而有了資料型態（Data type）的規範。  只要是資料都有型別。  ＊Ruby世界的資料型別由於Ruby是個完全物件導向的語言，從">
 <meta property="og:locale" content="en_US">
@@ -484,10 +484,10 @@ height:50vh;
     <!-- license  -->
     
         <div class="license-wrapper">
-            <!-- <p>Author：<a href="https://chiayinin.com">John Doe</a> -->
-            <p>原文連結：<a href="https://chiayinin.com/2020/09/11/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-4-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5%E3%80%81%E5%AD%97%E4%B8%B2%E3%80%8D/">https://chiayinin.com/2020/09/11/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-4-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5%E3%80%81%E5%AD%97%E4%B8%B2%E3%80%8D/</a>
-            <p>發表日期：<a href="https://chiayinin.com/2020/09/11/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-4-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5%E3%80%81%E5%AD%97%E4%B8%B2%E3%80%8D/">September 11th 2020</a>
-            <p>更新日期：<a href="https://chiayinin.com/2020/09/11/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-4-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5%E3%80%81%E5%AD%97%E4%B8%B2%E3%80%8D/">October 29th 2020</a>
+            <!-- <p>Author：<a href="https://chiayinin.github.io">John Doe</a> -->
+            <p>原文連結：<a href="https://chiayinin.github.io/2020/09/11/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-4-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5%E3%80%81%E5%AD%97%E4%B8%B2%E3%80%8D/">https://chiayinin.github.io/2020/09/11/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-4-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5%E3%80%81%E5%AD%97%E4%B8%B2%E3%80%8D/</a>
+            <p>發表日期：<a href="https://chiayinin.github.io/2020/09/11/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-4-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5%E3%80%81%E5%AD%97%E4%B8%B2%E3%80%8D/">September 11th 2020</a>
+            <p>更新日期：<a href="https://chiayinin.github.io/2020/09/11/2020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD-Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-4-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5%E3%80%81%E5%AD%97%E4%B8%B2%E3%80%8D/">October 29th 2020</a>
             <!-- <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
         </div>
     
