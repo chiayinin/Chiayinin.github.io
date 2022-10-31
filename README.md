@@ -1,6 +1,6 @@
 # Chiayin's blog
 
-我的部落格。[連結](https://chiayinin.com/)
+我的部落格。[連結](https://chiayinin.com/)。
 前端技術筆記，放置學習的紀錄，讓人真正地從入門到理解前端技術。
 
 ## 使用技術
