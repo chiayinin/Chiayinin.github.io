@@ -22,7 +22,7 @@
     <meta name="description" content="常數 Constant英文發音首先來聽聽英文發音～。 名詞解釋什麼是常數？ 與變數相反，變數可以改變，但常數不變！ 我們在宣告變數後，變數內存的資料有可能因程式的運算或指令而改變其資料內容。若確定內存的資料，在執行過程中其內容均不改變，可使用常數來裝存該資料。 Ruby世界的常數有什麼不一樣？  要「大寫英文字母」為開頭的命名！Ruby才有的規則。EX: Apple, Banana……。 原則">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【2020 12th鐵人賽】Ruby名詞解釋總匯 - Day 3: Ruby中的「常數、關鍵字與保留字」">
-<meta property="og:url" content="https://www.chiayinin.com/2022/10/30/%E3%80%902020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD%E3%80%91Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-3-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E5%B8%B8%E6%95%B8%E3%80%81%E9%97%9C%E9%8D%B5%E5%AD%97%E8%88%87%E4%BF%9D%E7%95%99%E5%AD%97%E3%80%8D/index.html">
+<meta property="og:url" content="https://chiayinin.com/2022/10/30/%E3%80%902020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD%E3%80%91Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-3-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E5%B8%B8%E6%95%B8%E3%80%81%E9%97%9C%E9%8D%B5%E5%AD%97%E8%88%87%E4%BF%9D%E7%95%99%E5%AD%97%E3%80%8D/index.html">
 <meta property="og:site_name" content="Chiayin&#39;s Blog">
 <meta property="og:description" content="常數 Constant英文發音首先來聽聽英文發音～。 名詞解釋什麼是常數？ 與變數相反，變數可以改變，但常數不變！ 我們在宣告變數後，變數內存的資料有可能因程式的運算或指令而改變其資料內容。若確定內存的資料，在執行過程中其內容均不改變，可使用常數來裝存該資料。 Ruby世界的常數有什麼不一樣？  要「大寫英文字母」為開頭的命名！Ruby才有的規則。EX: Apple, Banana……。 原則">
 <meta property="og:locale" content="zh_TW">
@@ -541,8 +541,8 @@
     <!-- license -->
     
         <div class="license-wrapper">
-            <!-- <p>原文作者：<a href="https://www.chiayinin.com">chiayinin</a> -->
-            <!-- <p>原文連結：<a href="https://www.chiayinin.com/2022/10/30/%E3%80%902020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD%E3%80%91Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-3-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E5%B8%B8%E6%95%B8%E3%80%81%E9%97%9C%E9%8D%B5%E5%AD%97%E8%88%87%E4%BF%9D%E7%95%99%E5%AD%97%E3%80%8D/">https://www.chiayinin.com/2022/10/30/%E3%80%902020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD%E3%80%91Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-3-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E5%B8%B8%E6%95%B8%E3%80%81%E9%97%9C%E9%8D%B5%E5%AD%97%E8%88%87%E4%BF%9D%E7%95%99%E5%AD%97%E3%80%8D/</a> -->
+            <!-- <p>原文作者：<a href="https://chiayinin.com">chiayinin</a> -->
+            <!-- <p>原文連結：<a href="https://chiayinin.com/2022/10/30/%E3%80%902020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD%E3%80%91Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-3-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E5%B8%B8%E6%95%B8%E3%80%81%E9%97%9C%E9%8D%B5%E5%AD%97%E8%88%87%E4%BF%9D%E7%95%99%E5%AD%97%E3%80%8D/">https://chiayinin.com/2022/10/30/%E3%80%902020-12th%E9%90%B5%E4%BA%BA%E8%B3%BD%E3%80%91Ruby%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B%E7%B8%BD%E5%8C%AF-Day-3-Ruby%E4%B8%AD%E7%9A%84%E3%80%8C%E5%B8%B8%E6%95%B8%E3%80%81%E9%97%9C%E9%8D%B5%E5%AD%97%E8%88%87%E4%BF%9D%E7%95%99%E5%AD%97%E3%80%8D/</a> -->
             <p>發佈日期：<a>2022-10-30</a>
             <p>更新日期：<a>2022-10-30</a>
             <!-- <p>版權聲明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
@@ -1105,7 +1105,7 @@
         siteMetaRoot = '/'
     }
     var siteMeta = {
-        url: "https://www.chiayinin.com",
+        url: "https://chiayinin.com",
         root: siteMetaRoot,
         author: "chiayinin"
     }
