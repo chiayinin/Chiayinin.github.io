@@ -6,7 +6,7 @@
   <link href="https://chiayinin.com/atom.xml" rel="self"/>
   
   <link href="https://chiayinin.com/"/>
-  <updated>2022-11-11T14:16:54.000Z</updated>
+  <updated>2022-11-12T09:28:56.000Z</updated>
   <id>https://chiayinin.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【刷題】CodeWars-6kyu</title>
+    <link href="https://chiayinin.com/2022/11/12/%E3%80%90%E5%88%B7%E9%A1%8C%E3%80%91CodeWars-6kyu/"/>
+    <id>https://chiayinin.com/2022/11/12/%E3%80%90%E5%88%B7%E9%A1%8C%E3%80%91CodeWars-6kyu/</id>
+    <published>2022-11-12T09:28:56.000Z</published>
+    <updated>2022-11-12T09:28:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>紀錄 <a href="https://www.codewars.com/dashboard">CodeWars</a> 的刷題過程、解答、衍伸想法。<br>不定期更新唷~。</p><h2 id="6kyu"><a href="#6kyu" class="headerlink" title="6kyu"></a>6kyu</h2><h3 id="Counting-Duplicates"><a href="#Counting-Duplicates" class="headerlink" title="Counting Duplicates"></a>Counting Duplicates</h3><p>日期:20221029<br>題目:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">計算字串中，有幾個重複出現的元素？</span><br><span class="line"></span><br><span class="line">EX:</span><br><span class="line">&quot;abcde&quot; -&gt; 0，沒有任何重複。</span><br><span class="line">&quot;aabbcde&quot; -&gt; 2，a 跟 b 重複，共兩個。</span><br><span class="line">&quot;aabBcde&quot; -&gt; 2，a 跟 b 重複，共兩個。大寫 B 等同於 小寫 b。</span><br><span class="line">&quot;aA11&quot; -&gt; 2，a 跟 1 重複，共兩個。</span><br><span class="line">&quot;ABBA&quot; -&gt; 2，A 跟 B 重複，共兩個。</span><br></pre></td></tr></table></figure><p>答案:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">duplicateCount</span> = text =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> total=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> obj = text.<span class="title function_">toLowerCase</span>().<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>).<span class="title function_">reduce</span>(<span class="function">(<span class="params">accumulator, currentValue</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(accumulator[currentValue]) &#123;</span><br><span class="line">      accumulator[currentValue] ++;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      accumulator[currentValue] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="keyword">return</span> accumulator;</span><br><span class="line">  &#125;, &#123;&#125;);</span><br><span class="line"></span><br><span class="line">  <span class="title class_">Object</span>.<span class="title function_">values</span>(obj).<span class="title function_">forEach</span>(<span class="function"><span class="params">i</span> =&gt;</span> i &gt;= <span class="number">2</span> ? total++ : total);</span><br><span class="line">  <span class="keyword">return</span> total;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>大約花兩小時解題。<br>就不另外想一行解法，免得到時回看看不懂自己的邏輯。<br>也是第一次嘗試<code>reduce()</code>方法，有熟悉一點，挺高興的！<br>解出來後看大神們的答案都寫好短喔😢 ，也是有進步空間，繼續加油！</p><hr><h3 id="Count-characters-in-your-string"><a href="#Count-characters-in-your-string" class="headerlink" title="Count characters in your string"></a>Count characters in your string</h3><p>日期: 20221106<br>題目:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">計算字串中同樣字的數量，</span><br><span class="line">例：&quot;aba&quot; -&gt; &#123;&#x27;a&#x27;: 2, &#x27;b&#x27;: 1&#125;，如果字串是空的則返回空物件。</span><br></pre></td></tr></table></figure><p>答案:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">count</span> = string =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">  string.<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>).<span class="title function_">forEach</span>( <span class="function"><span class="params">i</span> =&gt;</span> obj[i] ? obj[i] += <span class="number">1</span> : obj[i] = <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">return</span> obj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;紀錄 &lt;a href=&quot;https://www.codewars.com/dashboard&quot;&gt;CodeWars&lt;/a&gt; 的刷題過程、解答、衍伸想法。&lt;br&gt;不定期更新唷~。&lt;/p&gt;
+&lt;h2 id=&quot;6kyu&quot;&gt;&lt;a href=&quot;#6kyu&quot; class=&quot;headerli</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>【刷題】CodeWars-7kyu</title>
@@ -497,29 +518,6 @@
     
     
     <category term="JavaScript" scheme="https://chiayinin.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Ruby】程式語言中「符號（Symbol）」的介紹</title>
-    <link href="https://chiayinin.com/2022/10/30/%E3%80%90Ruby%E3%80%91%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E4%B8%AD%E3%80%8C%E7%AC%A6%E8%99%9F%EF%BC%88Symbol%EF%BC%89%E3%80%8D%E7%9A%84%E4%BB%8B%E7%B4%B9/"/>
-    <id>https://chiayinin.com/2022/10/30/%E3%80%90Ruby%E3%80%91%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E4%B8%AD%E3%80%8C%E7%AC%A6%E8%99%9F%EF%BC%88Symbol%EF%BC%89%E3%80%8D%E7%9A%84%E4%BB%8B%E7%B4%B9/</id>
-    <published>2022-10-30T12:23:40.000Z</published>
-    <updated>2022-10-30T12:23:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在 Ruby 的世界裡，幾乎什麼東西都是物件，即使是看起來很單純的數字，事實上它也是一個<font color="blue">數字物件</font>，本篇文章我們就來認識 Ruby 的<strong>符號</strong>（Symbol）</p><h1 id="一、Ruby-世界裡的符號（Symbol）是什麼"><a href="#一、Ruby-世界裡的符號（Symbol）是什麼" class="headerlink" title="一、Ruby 世界裡的符號（Symbol）是什麼"></a>一、Ruby 世界裡的符號（Symbol）是什麼</h1><p>可以想成「符號&#x3D;有被命名的物件( an object with a name )」，屬於「值或物件」的概念( 符號&#x3D;&#x3D;值(or物件) )，而非「變數」的概念( 符號!&#x3D;變數 )。</p><ol><li><p>跑程式碼會出現以下：<br>  「p :hello」跑出來「:hello」；「p 2」跑出來「2」。<br>  <img src="https://i.imgur.com/Fmq1RUw.png"></p></li><li><p>「變數成立」的成功寫法：「x&#x3D;”小松菜奈”」</p></li><li><p>「非變數不成立」的錯誤寫法：「2&#x3D;”小松菜奈”」、「 :hello&#x3D;”小松菜奈”」</p></li></ol><p>舉例來說，今天我們創造一個物件，將他命名為「小松菜奈」，透過程式碼寫出來長這樣「<font color="blue">:小松菜奈</font>」，這就是「&#x3D;&#x3D;符號&#x3D;&#x3D;」。這個物件(值)為「小松菜奈」，我們不能代入「大塚愛」或「松嶋菜菜子」，讓小松菜奈變成另外兩種物件，這樣是不可以的。</p><h2 id="PS：「變數」與「值」的分辨"><a href="#PS：「變數」與「值」的分辨" class="headerlink" title="PS：「變數」與「值」的分辨"></a>PS：「變數」與「值」的分辨</h2><ol><li>變數(Variable)。</li><li>在<font color="blue">數學的角度</font>來看，變數是指沒有固定的值，可以”改變的數”。這些變數通常使用英文字母或拉丁字母表示，Ex: x、y、z……等，大多數人在國中數學課的「二元一次方程式」與變數初次見面。</li><li>在程式設計中，變數（英語：Variable，scalar）是指一個包含部分已知或未知數值或資訊（即一個值）之儲存位址，以及相對應之符號名稱（識別字）。</li></ol><p>在程式設計中，變數的值不一定要為方程或數學公式之一部分。程式設計中的變數可使用在一段可重復的程式：在一處賦值，然後使用於另一處，接著在一次賦值，且以相同方式再使用一次（見疊代）。程式設計中的變數通常會給定一個較長的名稱，以描述其用途；數學中的變數通常較為簡潔，只給定一、兩個字母，以方便抄寫及操作。</p><ol start="2"><li><p>值(Value)<br>  是一無法進一步求值的表達式。[1]例如，表達式「1 + 2」不是一個值，因為它可以被化簡為表達式「3」。表達式「3」不能夠繼續化簡，因此它是一個值。</p></li><li><p>小結<br>  「變數」：可代入、內容物可變動。<br>  「值&#x2F;物件」：不可代入、不可修改、已經塑造好的個體，不可變動。</p></li></ol><h1 id="二、符號、數字、字串？"><a href="#二、符號、數字、字串？" class="headerlink" title="二、符號、數字、字串？"></a>二、符號、數字、字串？</h1><ol><li><p>符號、數字、字串的認識：<br>  看起來相像的三個物件，讓我們透過表格來了解他們的差異。<br>  <img src="https://i.imgur.com/31Nolde.png"></p></li><li><p>「符號」與「字串」的差別：<br>  (1) 「符號」<font color="blue">不可以變動</font>；「字串」<font color="blue">可以改變</font>。<br>  (2) 「字串」的效能比「符號」差一點點。</p></li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">舉例 1：</span><br><span class="line">name=&quot;abcdefg&quot;</span><br><span class="line">name[1]=&quot;x&quot;</span><br><span class="line">p name</span><br></pre></td></tr></table></figure><p>程式碼跑出來:<code>axcdefg</code><br><img src="https://i.imgur.com/QcJExw2.png"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">舉例 2：</span><br><span class="line">name=:abcdefg</span><br><span class="line">name[1]=&quot;x&quot;</span><br><span class="line">p name</span><br></pre></td></tr></table></figure><p>程式碼跑出來出現錯誤訊息:<code>undefined method</code><br><img src="https://i.imgur.com/WJKPK9s.png"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">舉例 3：</span><br><span class="line">利用「object_id」在「物件」的空間印出Ruby序號(也可當作記憶體的位置)，每次印都會出現不同的序號。</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/AJy9WE9.png"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">舉例 4：</span><br><span class="line">利用「object_id」在「:符號」的空間印出Ruby序號，出現過一次後，在Ruby的空間取得一個ID，都會使用同一個。</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/aq1SOye.png"></p><h1 id="三、結論：寫程式該選則「字串」還是「符號」"><a href="#三、結論：寫程式該選則「字串」還是「符號」" class="headerlink" title="三、結論：寫程式該選則「字串」還是「符號」"></a>三、結論：寫程式該選則「字串」還是「符號」</h1><p>情境一：當你寫的資料<font color="blue">不可變</font>，選擇<strong>符號</strong>。<br>情境二：當你寫的資料需要有<font color="blue">多變</font>使用方法，例如：排序、翻轉……等，選擇<strong>字串</strong>。</p><p>不同的情境選用不同的物件，讓你在寫 Ruby 時更加上手唷！<br>謝謝觀看。</p><h1 id="四、參考資料"><a href="#四、參考資料" class="headerlink" title="四、參考資料"></a>四、參考資料</h1><ul><li><a href="https://railsbook.tw/">為你自己學 Ruby on Rails</a></li><li>維基百科</li></ul><blockquote><p>本文於 2020-05-12 發表在舊網站。</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在 Ruby 的世界裡，幾乎什麼東西都是物件，即使是看起來很單純的數字，事實上它也是一個&lt;font color=&quot;blue&quot;&gt;數字物件&lt;/font&gt;，本篇文章我們就來認識 Ruby 的&lt;strong&gt;符號&lt;/strong&gt;（Symbol）&lt;/p&gt;
-&lt;h1 id=&quot;一、Rub</summary>
-      
-    
-    
-    
-    
-    <category term="Ruby" scheme="https://chiayinin.com/tags/Ruby/"/>
     
   </entry>
   
