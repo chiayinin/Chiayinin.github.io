@@ -26,14 +26,14 @@
 <meta property="og:site_name" content="Chiayin&#39;s Blog">
 <meta property="og:description" content="CICD 什麼是 CI&#x2F;CD ？協助開發者自動化軟體開發的工作流程，自動完成檔案上傳、測試機…..的工具，成功或失敗都會通知。白話的說就是：「原本手工要做完的事情，改用電腦自動幫你完成。」 重點就是要簡化並自動化繁瑣的工作，尤其是大型專案、遊戲專案，這類需要頻繁修改與測試的專案，幫助開發者提高工作效率，減少錯誤，並確保程式的品質和穩定性。 CI&#x2F;CD 解釋CI 持續整合（Con">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://hackmd.io/_uploads/BJ-ddVe9gl.png">
-<meta property="og:image" content="https://hackmd.io/_uploads/H1JMnBlcel.png">
+<meta property="og:image" content="https://blog.opsmx.com/wp-content/uploads/2022/03/Standard-DevOps-CICD.png">
+<meta property="og:image" content="https://i.meee.com.tw/zliYy2J.png">
 <meta property="article:published_time" content="2025-08-30T10:15:37.000Z">
 <meta property="article:modified_time" content="2025-08-30T10:15:37.000Z">
 <meta property="article:author" content="chiayinin">
 <meta property="article:tag" content="CICD">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://hackmd.io/_uploads/BJ-ddVe9gl.png">
+<meta name="twitter:image" content="https://blog.opsmx.com/wp-content/uploads/2022/03/Standard-DevOps-CICD.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.png">
@@ -498,7 +498,7 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="CICD"><a href="#CICD" class="headerlink" title="CICD"></a>CICD</h1><p><img src="https://hackmd.io/_uploads/BJ-ddVe9gl.png" alt="image"></p>
+        <h1 id="CICD"><a href="#CICD" class="headerlink" title="CICD"></a>CICD</h1><p><img src="https://blog.opsmx.com/wp-content/uploads/2022/03/Standard-DevOps-CICD.png"></p>
 <h1 id="什麼是-CI-x2F-CD-？"><a href="#什麼是-CI-x2F-CD-？" class="headerlink" title="什麼是 CI&#x2F;CD ？"></a>什麼是 CI&#x2F;CD ？</h1><p>協助開發者自動化軟體開發的工作流程，自動完成檔案上傳、測試機…..的工具，成功或失敗都會通知。<br>白話的說就是：「原本手工要做完的事情，改用電腦自動幫你完成。」</p>
 <p>重點就是要簡化並自動化繁瑣的工作，尤其是大型專案、遊戲專案，這類需要頻繁修改與測試的專案，幫助開發者提高工作效率，減少錯誤，並確保程式的品質和穩定性。</p>
 <h1 id="CI-x2F-CD-解釋"><a href="#CI-x2F-CD-解釋" class="headerlink" title="CI&#x2F;CD 解釋"></a>CI&#x2F;CD 解釋</h1><h2 id="CI-持續整合（Continuous-Integration-自動化整合）"><a href="#CI-持續整合（Continuous-Integration-自動化整合）" class="headerlink" title="CI 持續整合（Continuous Integration 自動化整合）"></a>CI 持續整合（Continuous Integration 自動化整合）</h2><p>在系統每一次變動時，能持續且自動地進行驗證，確保程式碼品質和可建置性。<br>每一次程式碼提交會觸發自動測試和驗證過程，也有助於多人協作時能最大限度地減少程式碼衝突的可能性，並主動回報錯誤。</p>
@@ -538,7 +538,7 @@
 </ul>
 <h3 id="撰寫範例"><a href="#撰寫範例" class="headerlink" title="撰寫範例"></a>撰寫範例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">name: Test</span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches: [&quot;main&quot;]</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  build:</span><br><span class="line">    name: build</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      - name: Checkout to Repo Directory</span><br><span class="line">        uses: actions/checkout@v2</span><br><span class="line">      - name: Use Node.js 18.16.0</span><br><span class="line">        uses: actions/setup-node@v2</span><br><span class="line">        with:</span><br><span class="line">          node-version: &quot;18.16.0&quot;</span><br><span class="line">      - name: NPM ci and cacheing</span><br><span class="line">        uses: bahmutov/npm-install@v1</span><br><span class="line">        with:</span><br><span class="line">          useRollingCache: true</span><br></pre></td></tr></table></figure>
 
-<h3 id="檢核通過畫面"><a href="#檢核通過畫面" class="headerlink" title="檢核通過畫面"></a>檢核通過畫面</h3><p><img src="https://hackmd.io/_uploads/H1JMnBlcel.png" alt="image"></p>
+<h3 id="檢核通過畫面"><a href="#檢核通過畫面" class="headerlink" title="檢核通過畫面"></a>檢核通過畫面</h3><p><img src="https://i.meee.com.tw/zliYy2J.png"></p>
 <h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><p><a target="_blank" rel="noopener" href="https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax">Workflow syntax for GitHub Actions</a></p>
 
     </article>
