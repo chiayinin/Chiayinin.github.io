@@ -6,7 +6,7 @@
   <link href="https://chiayinin.com/atom.xml" rel="self"/>
   
   <link href="https://chiayinin.com/"/>
-  <updated>2022-11-12T09:28:56.000Z</updated>
+  <updated>2025-08-30T10:15:37.000Z</updated>
   <id>https://chiayinin.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端人需要了解的 CI/CD</title>
+    <link href="https://chiayinin.com/2025/08/30/%E5%89%8D%E7%AB%AF%E4%BA%BA%E9%9C%80%E8%A6%81%E4%BA%86%E8%A7%A3%E7%9A%84-CI-CD/"/>
+    <id>https://chiayinin.com/2025/08/30/%E5%89%8D%E7%AB%AF%E4%BA%BA%E9%9C%80%E8%A6%81%E4%BA%86%E8%A7%A3%E7%9A%84-CI-CD/</id>
+    <published>2025-08-30T10:15:37.000Z</published>
+    <updated>2025-08-30T10:15:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CICD"><a href="#CICD" class="headerlink" title="CICD"></a>CICD</h1><p><img src="https://hackmd.io/_uploads/BJ-ddVe9gl.png" alt="image"></p><h1 id="什麼是-CI-x2F-CD-？"><a href="#什麼是-CI-x2F-CD-？" class="headerlink" title="什麼是 CI&#x2F;CD ？"></a>什麼是 CI&#x2F;CD ？</h1><p>協助開發者自動化軟體開發的工作流程，自動完成檔案上傳、測試機…..的工具，成功或失敗都會通知。<br>白話的說就是：「原本手工要做完的事情，改用電腦自動幫你完成。」</p><p>重點就是要簡化並自動化繁瑣的工作，尤其是大型專案、遊戲專案，這類需要頻繁修改與測試的專案，幫助開發者提高工作效率，減少錯誤，並確保程式的品質和穩定性。</p><h1 id="CI-x2F-CD-解釋"><a href="#CI-x2F-CD-解釋" class="headerlink" title="CI&#x2F;CD 解釋"></a>CI&#x2F;CD 解釋</h1><h2 id="CI-持續整合（Continuous-Integration-自動化整合）"><a href="#CI-持續整合（Continuous-Integration-自動化整合）" class="headerlink" title="CI 持續整合（Continuous Integration 自動化整合）"></a>CI 持續整合（Continuous Integration 自動化整合）</h2><p>在系統每一次變動時，能持續且自動地進行驗證，確保程式碼品質和可建置性。<br>每一次程式碼提交會觸發自動測試和驗證過程，也有助於多人協作時能最大限度地減少程式碼衝突的可能性，並主動回報錯誤。</p><p>其行為包含：</p><ul><li>程式碼提交(Commit)</li><li>自動構建(Build)</li><li>自動測試(Test)</li></ul><h2 id="CD-持續部署（Continuous-Deployment-自動化部屬）"><a href="#CD-持續部署（Continuous-Deployment-自動化部屬）" class="headerlink" title="CD 持續部署（Continuous Deployment 自動化部屬）"></a>CD 持續部署（Continuous Deployment 自動化部屬）</h2><p>程式碼在 CI 流程完成驗證後，透過自動化方式，部署到任何環境。<br>保持每次更新程式都可順暢完成，和確保服務存活。</p><p>其行為包含：</p><ul><li>自動部署到測試環境</li><li>使用者驗收測試(UAT)</li><li>部署到生產環境</li></ul><h1 id="CI-x2F-CD-Toos"><a href="#CI-x2F-CD-Toos" class="headerlink" title="CI&#x2F;CD Toos"></a>CI&#x2F;CD Toos</h1><ol><li>Jenkins: 最知名常見的開源 CI&#x2F;CD 工具，可在本地端或 Docker 安裝執行，有豐富的套件生態，自定義擴展性高。</li><li>GitHub Action: 專案放上 GitHub 才可以使用，小型專案能在免費額度(2000分鐘)內滿足基本需求。</li><li>GitLab: 使用者直接在官網上將 CI&#x2F;CD 流程建置上去。</li></ol><h1 id="CICD-實作，以-GitHub-Actions-為例"><a href="#CICD-實作，以-GitHub-Actions-為例" class="headerlink" title="CICD 實作，以 GitHub Actions 為例"></a>CICD 實作，以 GitHub Actions 為例</h1><h2 id="執行步驟"><a href="#執行步驟" class="headerlink" title="執行步驟"></a>執行步驟</h2><h3 id="第一步：創建-Workflow-文件"><a href="#第一步：創建-Workflow-文件" class="headerlink" title="第一步：創建 Workflow 文件"></a>第一步：創建 Workflow 文件</h3><p>新增資料夾 <code>.github/workflows</code></p><h3 id="第二步：編寫-Workflow-配置"><a href="#第二步：編寫-Workflow-配置" class="headerlink" title="第二步：編寫 Workflow 配置"></a>第二步：編寫 Workflow 配置</h3><p>新增 <code>.yaml</code> 檔</p><h3 id="第三步：推送到-GitHub"><a href="#第三步：推送到-GitHub" class="headerlink" title="第三步：推送到 GitHub"></a>第三步：推送到 GitHub</h3><p>設定好 github repository 遠端倉庫，在每一次 <code>git commit</code>、<code>git push</code> 後會直接執行 GitHub Actions。</p><h2 id="YAML-語法指令說明"><a href="#YAML-語法指令說明" class="headerlink" title="YAML 語法指令說明"></a>YAML 語法指令說明</h2><p>YAML 是一種 data serialisation 語言，可讀性高，GitHub Actions 的 workflow 以 YAML 檔案進行設定(副檔名為<code>.yml</code>或<code>.yaml</code>)。</p><h3 id="在-YAML-常用的指令："><a href="#在-YAML-常用的指令：" class="headerlink" title="在 YAML 常用的指令："></a>在 YAML 常用的指令：</h3><ul><li><p><code>name</code>: Workflow 名稱，也是在 Action 操作頁面中，工作流程清單的顯示名稱；如果沒有設定名稱，則會以<code>文件路徑 + 檔案名稱</code>命名。</p></li><li><p><code>on</code>: 必填，觸發在 workflow 的 Event 名稱，可以設定為每當有程式被推送（push）到倉庫時觸發。</p></li><li><p><code>job</code>: 定義 workflow 的任務，預設情況下是平行(並行)執行，例如: build、testing，進而設定循序執行。</p></li><li><p><code>runs-on</code>: 設定任務執行的環境，例如: ubuntu-latest、window-latest。</p></li><li><p><code>step</code>:定義了任務中要執行的步驟。step 內不一定只能執行 action，但 action要作為 step 執行。每個步驟皆在 Runner 上執行，可以存取資料區與文件系統。</p></li></ul><h3 id="撰寫範例"><a href="#撰寫範例" class="headerlink" title="撰寫範例"></a>撰寫範例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">name: Test</span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches: [&quot;main&quot;]</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  build:</span><br><span class="line">    name: build</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      - name: Checkout to Repo Directory</span><br><span class="line">        uses: actions/checkout@v2</span><br><span class="line">      - name: Use Node.js 18.16.0</span><br><span class="line">        uses: actions/setup-node@v2</span><br><span class="line">        with:</span><br><span class="line">          node-version: &quot;18.16.0&quot;</span><br><span class="line">      - name: NPM ci and cacheing</span><br><span class="line">        uses: bahmutov/npm-install@v1</span><br><span class="line">        with:</span><br><span class="line">          useRollingCache: true</span><br></pre></td></tr></table></figure><h3 id="檢核通過畫面"><a href="#檢核通過畫面" class="headerlink" title="檢核通過畫面"></a>檢核通過畫面</h3><p><img src="https://hackmd.io/_uploads/H1JMnBlcel.png" alt="image"></p><h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><p><a href="https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax">Workflow syntax for GitHub Actions</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;CICD&quot;&gt;&lt;a href=&quot;#CICD&quot; class=&quot;headerlink&quot; title=&quot;CICD&quot;&gt;&lt;/a&gt;CICD&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://hackmd.io/_uploads/BJ-ddVe9gl.png&quot; alt=&quot;imag</summary>
+      
+    
+    
+    
+    
+    <category term="CICD" scheme="https://chiayinin.com/tags/CICD/"/>
+    
+  </entry>
   
   <entry>
     <title>【刷題】CodeWars-6kyu</title>
@@ -495,29 +517,6 @@
     <category term="Ruby" scheme="https://chiayinin.com/tags/Ruby/"/>
     
     <category term="12th鐵人賽" scheme="https://chiayinin.com/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【JS筆記】JavaScript的變數與資料型別</title>
-    <link href="https://chiayinin.com/2022/10/30/%E3%80%90JS%E7%AD%86%E8%A8%98%E3%80%91JavaScript%E7%9A%84%E8%AE%8A%E6%95%B8%E8%88%87%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5/"/>
-    <id>https://chiayinin.com/2022/10/30/%E3%80%90JS%E7%AD%86%E8%A8%98%E3%80%91JavaScript%E7%9A%84%E8%AE%8A%E6%95%B8%E8%88%87%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5/</id>
-    <published>2022-10-30T12:28:38.000Z</published>
-    <updated>2022-10-30T12:28:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>一直很害怕寫文章，因為覺得自己不是學得很好。</p><p><strong>不過接觸到JavaScript後，可能是對這個語言比較投緣吧，覺得有信心起來，試著自己寫筆記看看，希能好好養成書寫技術文章的習慣，加油囉！</strong></p><p><img src="https://i.imgur.com/lXFKLM7.png"></p><p>(心智圖可以點擊放大)</p><h1 id="變數"><a href="#變數" class="headerlink" title="變數"></a>變數</h1><h2 id="命名方式"><a href="#命名方式" class="headerlink" title="命名方式:"></a>命名方式:</h2><ol><li>英文字母</li><li>_ 底線</li><li>$ 錢字號</li><li>不可以是保留字 (Reserved Words) 與關鍵字 (keyword)</li></ol><p>變數命名規則有以下規定，<strong>第一個字母</strong>一定要是<font color="blue">英文、_、$</font>，則一，且<font color="blue">不可以是保留字與關鍵字</font>。<br>另外JavaScript語法有支援大小寫、變數可以使用中文字母，但基於開發習慣還是建議盡量<font color="blue">使用英文字母來命名</font>。</p><h2 id="宣告方式"><a href="#宣告方式" class="headerlink" title="宣告方式:"></a>宣告方式:</h2><ol><li>不寫</li><li>var</li><li>let</li><li>const</li></ol><p><font color="blue">var</font>是舊式寫法，ES6之後支援<font color="blue">let、const</font>寫法，會建議之後都採用<font color="blue">新式寫法let</font>。<br>不寫的話，該變數就會變成<font color="blue">全域變數</font>，<font color="red">不建議這樣使用</font>。</p><h1 id="資料型別"><a href="#資料型別" class="headerlink" title="資料型別"></a>資料型別</h1><h2 id="JavaScript是「弱型別語言」"><a href="#JavaScript是「弱型別語言」" class="headerlink" title="JavaScript是「弱型別語言」"></a>JavaScript是「弱型別語言」</h2><p>在程式語言中，會依語言的型別系統分為「強行別語言」和「弱型別語言」，可從<a href="https://zh.wikipedia.org/wiki/%E5%BC%B7%E5%BC%B1%E5%9E%8B%E5%88%A5">維基百科</a>來了解他們。而JavaScript是「弱型別語言」會有以下特性：</p><ol><li>變數本身不帶資料型別的資訊。</li><li>其資料型別判斷來自於參考「值」或「物件」才得知有什麼操作方法。</li></ol><h2 id="JavaScript內見資料型別"><a href="#JavaScript內見資料型別" class="headerlink" title="JavaScript內見資料型別"></a>JavaScript內見資料型別</h2><p>主要分為以下兩大類:</p><ul><li>基本型別 (Primitives):字串、數字、布林值、nell 和 undefined。</li><li>物件型別 (Object):除了以上以外皆是。</li></ul><p>在這邊不特別介紹字串、數字、布林值，不過可以特別講一下null和undefined。<br>大部分程式語言都會有個null，用中文解釋就是「空值」、「不存在」的意思，有點抽象，就好像如何跟小朋友解釋「空氣」「不存在的物體」那樣在一開始時會有點難理解，習慣後就很直覺化了。</p><p>而JavaScript又多了一個undefined，兩者意思分別為:</p><ul><li>undefined:該變數還沒有給值(裝東西)，所以還不知道他是什麼東東。</li><li>null:該變數可能曾經有裝東西、又有可能沒有裝東西，但是現在是沒有東東的。</li></ul><p><strong>本次筆記到此，謝謝觀看。👏</strong></p><ul><li>參考資料:<a href="https://ithelp.ithome.com.tw/articles/10190873">2018鐵人賽，重新認識 JavaScript: Day 03 變數與資料型別</a></li></ul><blockquote><p>本文於 2020-08-22 發表在舊網站。</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;一直很害怕寫文章，因為覺得自己不是學得很好。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;不過接觸到JavaScript後，可能是對這個語言比較投緣吧，覺</summary>
-      
-    
-    
-    
-    
-    <category term="JavaScript" scheme="https://chiayinin.com/tags/JavaScript/"/>
     
   </entry>
   
